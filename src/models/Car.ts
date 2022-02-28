@@ -1,6 +1,6 @@
 export interface Car {
   name: string;
-  miles_per_gallon: number;
+  miles_per_gallon: number | null;
   cylinders: number;
   displacement: number;
   horsepower: number;
