@@ -50,7 +50,10 @@ export default function CarCard({ car }: Props) {
                   {' '}
                   <span className={classes.carPropHeading}>
                     {carProp}
-                  </span> : {car[carProp as keyof Car]}{' '}
+                  </span> :{' '}
+                  <span className="heading-test">
+                    {car[carProp as keyof Car]}
+                  </span>
                 </Typography>
               ),
           )}

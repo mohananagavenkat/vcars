@@ -58,23 +58,6 @@ const theme = {
       dark: '#F57C00',
       contrast: 'rgba(0, 0, 0, 0.87)',
     },
-    background: {
-      default: '#05171B',
-      paper: '#253442',
-    },
-    divider: 'rgba(255, 255, 255, 0.12)',
-    backdrop: 'rgba(0, 0, 0, 0.5)',
-    activeRating: 'rgba(255, 180, 0, 1)',
-    snackbar: 'rgba(255, 255, 255, 1)',
-    action: {
-      active: 'rgba(255, 255, 255, 0.56)',
-      hover: 'rgba(255, 255, 255, 0.08)',
-      selected: 'rgba(255, 255, 255, 0.16)',
-      disabled: 'rgba(255, 255, 255, 0.3)',
-      disabledBackground: 'rgba(255, 255, 255, 0.12)',
-      focus: 'rgba(255, 255, 255, 0.12)',
-    },
-    linkedIn: '#0077B3',
   },
 } as const;
 type CustomTheme = {

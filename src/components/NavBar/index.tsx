@@ -17,7 +17,7 @@ export default function Navbar({ title = 'V CARS' }) {
   const classes = useStyles();
   return (
     <>
-      <Toolbar className={classes.root}>
+      <Toolbar data-testid="navbar" className={classes.root}>
         <Typography className={classes.title} variant="h6">
           {title}
         </Typography>

@@ -1,13 +1,14 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
-import { MemoryRouter } from 'react-router';
+import CarsPage from '.';
+import { MemoryRouter } from 'react-router-dom';
 
-test('renders learn react link', () => {
+test('render cars page', async () => {
   render(
     <MemoryRouter>
-      <App />
+      <CarsPage />
     </MemoryRouter>,
   );
+
   expect(screen.getByTestId('navbar')).toBeInTheDocument();
 });

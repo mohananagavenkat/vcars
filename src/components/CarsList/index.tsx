@@ -1,11 +1,11 @@
 import { Car } from '../../models/Car';
 import CarCard from '../CarCard';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
 import { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 
 interface Props {
   cars: Car[];
@@ -14,11 +14,14 @@ interface Props {
 const useStyles = makeStyles({
   sortWrapper: {
     width: '100%',
-    textAlign: 'right',
     margin: '0 1rem 1rem 0',
+    color: '#fff',
   },
   sortElement: {
     width: '150px',
+  },
+  sortSelect: {
+    background: '#fff',
   },
 });
 
@@ -47,7 +50,7 @@ export default function CarsList({ cars }: Props) {
 
   return (
     <>
-      <div className={classes.sortWrapper}>
+      <div data-testid="cars-list" className={classes.sortWrapper}>
         <FormControl className={classes.sortElement}>
           <InputLabel id="sort-cars">Sort By</InputLabel>
           <Select
@@ -56,6 +59,7 @@ export default function CarsList({ cars }: Props) {
             value={sortBy}
             label="sortBy"
             onChange={handleChange}
+            className={classes.sortSelect}
           >
             <MenuItem value={'name'}>Name</MenuItem>
             <MenuItem value={'miles_per_gallon'}>Miles Per Gallon</MenuItem>
